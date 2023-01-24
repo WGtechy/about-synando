@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router';
+import './App.scss';
+import AppTemplatePage from './views/AppTemplatePage';
+import Comment from './views/Comment';
+import DownloadPage from './views/DownloadPage';
+import Features from './views/Features';
+import IntroPage from './views/IntroPage';
+import LandingPage from './views/LandingPage';
+import SocialInteraction from './views/SocialInteraction';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Routes>
+    <Route path ='/' element={<LandingPage />} />
+  </Routes>
   );
 }
 

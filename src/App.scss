@@ -1,0 +1,628 @@
+html {
+  scroll-snap-type: y mandatory;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    width: 100vw;
+    height: 100vh;
+} */
+
+// .container {
+//   height: 100vh;
+//   scroll-snap-type: y mandatory;
+//   /* overflow-y: scroll; */
+//   scrollbar-width: none;
+// }
+
+.comment,
+.features,
+.introPage,
+.socialInteraction,
+.downloadPage,
+.appTemplatePage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  scroll-snap-align: start;
+}
+
+.introPage .logo {
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background: white;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+  .mobile {
+    display: none;
+  }
+  .introPage {
+    .mobileBtn {
+      display: none;
+    }
+    .large {
+      height: 100vh;
+      width: 100%;
+      font-size: 18px;
+      align-items: center;
+      padding-left: 3rem;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(147, 6, 112, 10)),
+        url("./assets/homeBG.jpg");
+      background-position: center;
+      background-size: cover;
+      .introPageLarge {
+        display: flex;
+        flex-direction: column;
+        color: #ebebeb;
+        justify-content: space-evenly;
+        height: 100vh;
+        .homeText {
+          .experience {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            width: 300px;
+            .words {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 0;
+              right: 0;
+              overflow: hidden;
+              span {
+                color: #2faffd;
+                animation: spin_words 6s infinite;
+                font-weight: 700;
+              }
+
+              @keyframes spin_words {
+                10% {
+                  transform: translateY(-112%);
+                }
+                25% {
+                  transform: translateY(-100%);
+                }
+                35% {
+                  transform: translateY(-212%);
+                }
+                50% {
+                  transform: translateY(-200%);
+                }
+                60% {
+                  transform: translateY(-312%);
+                }
+                75% {
+                  transform: translateY(-300%);
+                }
+                85% {
+                  transform: translateY(-412%);
+                }
+                100% {
+                  transform: translateY(-400%);
+                }
+              }
+            }
+          }
+        }
+        .downloadIcons {
+          display: flex;
+          flex-direction: row;
+          .downloadIcon {
+            border: 1px solid #ebebeb;
+            color: #ebebeb;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+          }
+        }
+        .downloadIcon:hover {
+          background: #2faffd;
+        }
+      }
+    }
+  }
+  .features {
+    background: linear-gradient(rgba(154, 0, 249, 0.61), #9a00f9),
+      url("./assets/students.jpg");
+    background-position: center;
+    background-size: cover;
+    .large {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: auto;
+        width: 100vw;
+        .section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .icon {
+            font-size: 4rem;
+            color: #fff;
+          }
+          .title {
+            font-size: 25px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+          }
+          .card {
+            max-width: 300px;
+            height: 18rem;
+            font-size: 18px;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 5%;
+            box-shadow: 1px 1px 6px -1px #e3e3e3;
+            .description {
+              line-height: 25px;
+              font-size: 1rem;
+              font-weight: 600;
+            }
+            ul {
+              padding: 1rem;
+              font-size: 0.8rem;
+              font-weight: 600;
+              li {
+                padding-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .appTemplatePage {
+    background: #000;
+    .large {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: auto;
+      .content {
+        color: #ebebeb;
+        font-size: 30px;
+        width: 400px;
+        margin-bottom: 25px;
+        line-height: 35px;
+      }
+      .appImage {
+        display: flex;
+        flex-direction: row;
+
+        .page {
+          width: 200px;
+          height: 400px;
+          margin-left: -5em;
+          transition: margin-left 200ms;
+        }
+        .page:hover {
+          margin-left: -0.5em;
+        }
+      }
+    }
+  }
+
+  .socialInteraction {
+    .content {
+      .mobile {
+        display: none;
+      }
+    }
+  }
+
+  .downloadPage {
+    background: #9a00f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    h4 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 4rem;
+    }
+    .download {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      .downloadIcon {
+        text-decoration: none;
+        .icon {
+          color: #fff;
+          font-size: 4rem;
+          margin: 0 0.7rem;
+        }
+        cursor: pointer;
+        background: #000;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        div {
+          display: flex;
+          flex-direction: column;
+          color: #fff;
+          .firstText {
+            font-weight: 500;
+            font-size: 0.5rem;
+          }
+          .secondText {
+            font-weight: 700;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+  .large {
+    display: none;
+  }
+
+  .introPage {
+    .mobileBtn {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      .mobileIcon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 6px;
+        text-decoration: none;
+        .iconText {
+          color: white;
+          font-weight: 600;
+        }
+        .icon {
+          width: 50px;
+          height: 50px;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background: #ffffff61;
+          color: purple;
+          font-size: 30px;
+        }
+      }
+    }
+    .mobile {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+  .downloadIcons {
+    position: absolute;
+    bottom: 0;
+    // left: 50px;
+    margin: 0 auto;
+    width: 100vw;
+    // right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .downloadIcon {
+      .icon {
+        padding: 0 5px;
+      }
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
+      padding: 10px;
+      text-decoration: none;
+      margin: 10px;
+      display: flex;
+      font-size: 18px;
+      font-weight: 700;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1;
+      background: rgba(154, 0, 249, 0.61);
+      color: #fff;
+    }
+  }
+  .downloadIcon:hover {
+    background: #2faffd;
+  }
+
+  .appTemplatePage {
+    background: #000;
+    .large {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-evenly;
+      margin: auto;
+      position: relative;
+      .content {
+        color: #ebebeb;
+        font-size: 30px;
+        margin-bottom: 25px;
+        line-height: 35px;
+      }
+      .appImage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+        width: 100vw;
+
+        .page {
+          width: 150px;
+          height: 300px;
+          margin-left: -4em;
+          transition: margin-left 200ms;
+        }
+        .page:hover {
+          margin-left: -0.5em;
+        }
+      }
+    }
+  }
+
+  
+.socialInteraction {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: auto;
+    position: relative;
+    color: #262424;
+    font-size: 30px;
+    width: 100vw;
+    // margin-bottom: 25px;
+    line-height: 35px;
+    .experience {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      .words {
+        display: flex;
+        flex-direction: row;
+        font-size: 15rem;
+        font-weight: 400;
+        width: 100vw;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        overflow: hidden;
+        span {
+          color: #2faffd;
+          animation: spin_words 6s infinite;
+          font-weight: 700;
+        }
+
+      }
+    }
+  }
+  .peopleImg {
+    width: 100vw;
+    // height: 10rem;
+  }
+}
+
+  .features {
+    overflow: scroll;
+    .peopleImg {
+      width: 100vw;
+    }
+    .mobile {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .content {
+        height: 100vh;
+        // width: 100vw;
+        position: relative;
+        // overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        scroll-snap-type: x mandatory;
+        .section {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          width: 90vw;
+          color: black;
+          box-shadow: 1px 1px 6px -1px rgba(154, 0, 249, 0.61);
+          border-radius: 5px;
+          margin: 3px;
+          scroll-snap-align: start;
+
+          .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon {
+              margin-left: 5px;
+              font-size: 2rem;
+              color: purple;
+            }
+            font-size: 25px;
+            font-weight: 600;
+            color: black;
+            margin-bottom: 0.5rem;
+          }
+          .info {
+            font-size: 18px;
+            background: #fff;
+            padding: 1rem;
+            .description {
+              line-height: 30px;
+              font-size: 18px;
+            }
+            ul {
+              padding: 1rem;
+              font-size: 1rem;
+              li {
+                padding-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+        .comment2 {
+          scroll-snap-align: start;
+        }
+      }
+    }
+  }
+
+  .downloadPage {
+    background: #9a00f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h4 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    .download {
+      flex-direction: column !important;
+      .downloadIcon {
+        text-decoration: none;
+        .icon {
+          color: #fff;
+          font-size: 4rem;
+          margin: 0 0.7rem;
+        }
+        cursor: pointer;
+        background: #000;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        div {
+          display: flex;
+          flex-direction: column;
+          color: #fff;
+          .firstText {
+            font-weight: 500;
+            font-size: 0.5rem;
+          }
+          .secondText {
+            font-weight: 700;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // .appImage{
+  //   width: 90%;
+  //   margin: auto;
+  //   display: flex;
+  //   flex-direction: row;
+
+  //   .page{
+  //     width: 50px;
+  //     height: 100px;
+  //     margin-left: -5em;
+  //     transition: margin-left 200ms
+  //   }
+  //   .page:hover{
+  //     margin-left: -.5em
+  //   }
+  // }
+
+  .socialInteraction {
+    .large {
+      display: none;
+    }
+    .content {
+      .experience {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.comment {
+  // background: #fff;
+  display: flex;
+  align-items: center;
+}
+
