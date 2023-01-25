@@ -385,8 +385,9 @@ html {
   }
 
   .appTemplatePage {
+    .large{display:none};
     background: #000;
-    .large {
+    .mobile {
       width: 100vw;
       height: 100vh;
       display: flex;
@@ -399,26 +400,31 @@ html {
       .content {
         color: #ebebeb;
         font-size: 30px;
-        margin-bottom: 25px;
+        margin: 25px 5px;
         line-height: 35px;
       }
-      .appImage {
+      .tempContainer {
         display: flex;
         flex-direction: row;
-        align-items: center;
         margin: 0 auto;
-        justify-content: center;
         width: 100vw;
+        height: 70%;
+        overflow-x: hidden;
+        position: relative;
+        scroll-snap-type: x mandatory;
+        overflow: scroll;
 
-        .page {
-          width: 150px;
-          height: 300px;
-          margin-left: -4em;
-          transition: margin-left 200ms;
+        .image {
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          width: 90vw;
+          color: black;
+          scroll-snap-align: start;
         }
-        .page:hover {
-          margin-left: -0.5em;
-        }
+        // .page:hover {
+        //   margin-left: -0.5em;
+        // }
       }
     }
   }
@@ -484,25 +490,32 @@ html {
       display: flex;
       flex-direction: column;
       position: relative;
-
-      .content {
         height: 100vh;
-        // width: 100vw;
-        position: relative;
-        // overflow: hidden;
-        display: flex;
-        flex-direction: row;
-        scroll-snap-type: x mandatory;
-        .section {
+      .content {
+        margin: 25px 5px;
+        width: 100vw;
+        justify-content: space-between;
+    // overflow-x: hidden;
+
+  .sectionContainer {
+    scroll-snap-type: x mandatory;
+    margin: 25px auto;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    height: 70vh;
+   .section {
           display: flex;
           align-items: center;
           flex-direction: column;
           justify-content: center;
-          width: 90vw;
+          width: 100vw;
           color: black;
           box-shadow: 1px 1px 6px -1px rgba(154, 0, 249, 0.61);
           border-radius: 5px;
-          margin: 3px;
+          margin: 5px;
+          padding: 5px 0;
           scroll-snap-align: start;
 
           .title {
@@ -536,10 +549,13 @@ html {
             }
           }
         }
-        .comment2 {
-          scroll-snap-align: start;
-        }
+
+  }
       }
+       .peopleImg {
+        width: 100vw;
+      }
+     
     }
   }
 

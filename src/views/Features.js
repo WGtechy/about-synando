@@ -70,6 +70,7 @@ const Features = () => {
       </div>
       <div className="mobile">
         <div className="content">
+        <div className='sectionContainer'>
           {cards.map((item, i) => (
             <div className={`section ${item.className}`} key={i}>
               <div className="title">
@@ -88,14 +89,17 @@ const Features = () => {
               </div>
             </div>
           ))}
+          </div>
+         
         </div>
-      </div>
-      {/* <img
+          <img
         src={people}
         className="peopleImg mobile"
         alt="people"
         onContextMenu={(e) => e.preventDefault()}
-      /> */}
+      />
+      </div>
+     
     </div>
   );
 };

@@ -151,20 +151,6 @@ const IntroPage = () => {
           loop
           alt="synando into"
         />
-        <div className="downloadIcons">
-          {downloadIcons.map((item, i) => (
-            <a
-              href={`https://www.${item.url}`}
-              rel="noreferrer"
-              target="_blank"
-              className="downloadIcon"
-              key={i}
-            >
-              <div className="icon">{item.icon}</div>
-              <p>{item.name}</p>
-            </a>
-          ))}
-        </div>
       </div>
     </div>
   );

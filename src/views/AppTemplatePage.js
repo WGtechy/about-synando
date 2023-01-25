@@ -19,6 +19,15 @@ const AppTemplatePage = () => {
         {images.map((item,i)=><img src={item} key={i} className="page" alt={`page${i}`}  onContextMenu={(e)=>e.preventDefault()} />)}
         </div>
       </div>
+      <div className="mobile">
+        <div className="content">
+          <h3>Share your personal stories and inspire real connections</h3>
+          
+        </div>
+        <div className="tempContainer">
+        {images.map((item,i)=><img src={item} key={i} className="image" alt={`page${i}`}  onContextMenu={(e)=>e.preventDefault()} />)}
+        </div>
+      </div>
     </div>
   );
 };

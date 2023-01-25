@@ -6,9 +6,10 @@ import IntroPage from './IntroPage'
 import SocialInteraction from './SocialInteraction'
 
 const LandingPage = ({props}) => {
+const loading = (<div>Loading...</div>)
   return (
+  <Suspense fallback={loading}>
    <main className='container'>
-  
    <IntroPage 
     />
    <AppTemplatePage 
@@ -18,8 +19,8 @@ const LandingPage = ({props}) => {
    <Features  />
    {/* <Comment  /> */}
    <DownloadPage  />
-   
    </main>
+   </Suspense>  
   )
 }
 
