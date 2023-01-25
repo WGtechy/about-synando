@@ -25,7 +25,7 @@ const SocialInteraction = () => {
       <img src={people} className='peopleImg large' alt='people' onContextMenu={(e)=>e.preventDefault()} />
       <img src={synandoSocial} className='peopleImg mobile' alt='people'  onContextMenu={(e)=>e.preventDefault()} />
     </div>
-  );
+  ); 
 };
 
 export default SocialInteraction;
