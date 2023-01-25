@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/about-synando/static/css/main.70568401.css",
+    "main.js": "/about-synando/static/js/main.512baa4e.js",
+    "static/js/787.c0307b94.chunk.js": "/about-synando/static/js/787.c0307b94.chunk.js",
+    "static/media/homeVideo.mp4": "/about-synando/static/media/homeVideo.6d2f19e89ffa75c69fbf.mp4",
+    "static/media/synandoSocial.png": "/about-synando/static/media/synandoSocial.9d43efb578999e6254c4.png",
+    "static/media/students.jpg": "/about-synando/static/media/students.7b8d459f21c174691264.jpg",
+    "static/media/page4.jpg": "/about-synando/static/media/page4.ecd8948d7cb831527050.jpg",
+    "static/media/homeBG.jpg": "/about-synando/static/media/homeBG.4bc8f8a0670a92f7a8c3.jpg",
+    "static/media/people.jpg": "/about-synando/static/media/people.ca1ebd6077cffbcd9e0a.jpg",
+    "static/media/page3.jpg": "/about-synando/static/media/page3.04ecec5a0ed717cc7896.jpg",
+    "static/media/page2.jpg": "/about-synando/static/media/page2.64da016b9ded64aa204c.jpg",
+    "static/media/page1.jpg": "/about-synando/static/media/page1.df4a00e9552caea8f101.jpg",
+    "index.html": "/about-synando/index.html",
+    "main.70568401.css.map": "/about-synando/static/css/main.70568401.css.map",
+    "main.512baa4e.js.map": "/about-synando/static/js/main.512baa4e.js.map",
+    "787.c0307b94.chunk.js.map": "/about-synando/static/js/787.c0307b94.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70568401.css",
+    "static/js/main.512baa4e.js"
+  ]
+}
