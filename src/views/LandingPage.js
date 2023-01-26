@@ -7,18 +7,16 @@ import SocialInteraction from './SocialInteraction'
 
 const LandingPage = ({props}) => {
 const loading = (<div>Loading...</div>)
+
   return (
   <Suspense fallback={loading}>
    <main className='container'>
-   <IntroPage 
-    />
-   <AppTemplatePage 
-    />
-   <SocialInteraction 
-    />
-   <Features  />
+   <IntroPage />
+   <AppTemplatePage />
+   <SocialInteraction />
+   <Features />
    {/* <Comment  /> */}
-   <DownloadPage  />
+   <DownloadPage />
    </main>
    </Suspense>  
   )

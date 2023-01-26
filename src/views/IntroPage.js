@@ -1,19 +1,24 @@
-import { useCallback, useRef, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import {
   IoLogoApple,
   IoLogoAndroid,
   IoVolumeMuteSharp,
   IoVolumeHighSharp,
+  IoShareSocialSharp
 } from "react-icons/io5";
 import homeVideo from "../assets/homeVideo.mp4";
-import { endHandler, moveHandler, startHandler } from "./utilities/funcs";
-const IntroPage = () => {
-  const observer = useRef(null);
+const IntroPage = ({observer}) => {
   const [play, setPlay] = useState(true)
   const videoRef = useRef(null);
   const [volume, setVolume] = useState(false);
-  const btnRef = useRef(null)
+  const [share, setShare] = useState(false)
+
+  useEffect(()=>{
+    if(navigator.share){
+      setShare(true)
+    } else { setShare(false)}
+  },[])
+
   const onVolumePress = (node) => {
     if (videoRef.current.muted && play) {
       videoRef.current.muted = false;
@@ -23,6 +28,30 @@ const IntroPage = () => {
       setVolume(false);
     }
   };
+  console.log(navigator.appVersion)
+
+  const shareHandler = ()=>{
+    const file= homeVideo;
+    // console.log(navigator, {share: navigator?.share}, homeVideo, files)
+    let url = 'https://synando.io';
+     if (navigator.share && navigator?.canShare({file})){
+      navigator.share({
+        title: 'Try Synando totday',
+        text: 'Join The World First Real Life Social Network Experience Real Privacy, Networks, Social & Connections',
+        file,
+        url: 'https://www.synando.com'
+      }).then(()=>console.log('Thank you for sharing')).catch(error=>console.log('Sorry could not share, please try again later', error))
+    } else 
+    if(navigator.share) {
+       navigator.share({
+        title: 'Download Synando today and share',
+        text: 'Join The World First Real Life Social Network Experience Real Privacy, Networks, Social & Connections',
+        url,
+        file
+      }).then(()=>console.log('Thank you for sharing')).catch(error=>console.log('Sorry could not share, please try again later', error))
+
+    } else { console.log('Not supported')}
+  }
   const videoToggle = ()=>{
     if(videoRef.current && play){
       videoRef.current.pause()
@@ -41,58 +70,69 @@ const IntroPage = () => {
 
   const downloadIcons = [
     {
-      icon: <IoLogoApple />,
+      icon: IoLogoApple,
       name: "App Store",
       url: "apps.apple.com/us/app/synando/id6443847115",
     },
     {
-      icon: <IoLogoAndroid />,
+      icon: IoLogoAndroid,
       name: "Android APK",
       url: "drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
+    },
+    {
+      name: "Share",
+      icon: IoShareSocialSharp,
+      display: share,
+      clickHandler: shareHandler
     },
   ];
   const mobileBtn = [
     {
-      data: "volume",
+      icon: volume ? IoVolumeHighSharp : IoVolumeMuteSharp,
+      clickHandler: onVolumePress,
+      name: "Sound",
+      display: true,
       type: "click",
+    },
+     {
+      name: "Share",
+      type: "click",
+      icon: IoShareSocialSharp,
+      display: share,
+      clickHandler: shareHandler
     },
     {
       icon: <IoLogoApple />,
       url: "apps.apple.com/us/app/synando/id6443847115",
       type: "visit",
       name: "Apple",
+      display: navigator.appVersion.includes('Mac')
     },
     {
       icon: <IoLogoAndroid />,
       name: "Android",
       url: "drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
       type: "visit",
+      display: navigator.appVersion.includes('Android')
+
     },
   ];
   return (
-    <div className="introPage">
+    <div className="introPage" ref={observer}>
       <img src="favicon.ico" alt="logo" className="logo" />
       <div className="mobileBtn">
         {mobileBtn.map((item, i) =>
           item.type === "click" ? (
-            <div className="mobileIcon" key={i}>
-              {volume ? (
-                <IoVolumeHighSharp
+            item.display && <div className="mobileIcon" key={i}>
+            <item.icon
                   className="icon"
                   key={i}
-                  onClick={onVolumePress}
+                  onClick={item.clickHandler}
                 />
-              ) : (
-                <IoVolumeMuteSharp
-                  className="icon"
-                  key={i}
-                  onClick={onVolumePress}
-                />
-              )}
-              <div className='iconText'>Sound</div>
+              <div className='iconText'>{item.name}</div>
             </div>
           ) : (
-            <a
+            item.display && <a
               href={`https://www.${item.url}`}
               rel="noreferrer"
               target="_blank"
@@ -111,7 +151,7 @@ const IntroPage = () => {
         <div className="introPageLarge">
           <div className="homeText">
             <h2>
-              Join The World First <br /> Real Life Social NEtwork
+              Join The World First <br /> Real Life Social Network
             </h2>
             <div className="experience">
               Experience Real{" "}
@@ -126,16 +166,23 @@ const IntroPage = () => {
           </div>
           <div className="downloadIcons">
             {downloadIcons.map((item, i) => (
-              <a
+              item?.url ? <a
                 href={`https://www.${item.url}`}
                 rel="noreferrer"
                 target="_blank"
                 className="downloadIcon"
                 key={i}
               >
-                <div className="icon">{item.icon}</div>
+                <div className="icon"><item.icon /></div>
                 <p>{item.name}</p>
-              </a>
+              </a> : 
+              item?.clickHandler && item?.display && <div className='downloadIcon' 
+              key={i}
+               onClick={item.clickHandler}
+               >
+               <div className='icon'><item.icon /></div>
+                 <p>{item.name}</p>
+              </div>
             ))}
           </div>
         </div>

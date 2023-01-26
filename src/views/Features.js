@@ -1,16 +1,14 @@
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
 import people from "../assets/people.jpg";
 
 import { FaRegHandshake } from "react-icons/fa";
 import { MdOutlineRssFeed, MdVerified } from "react-icons/md";
-import { endHandler, moveHandler, startHandler } from "./utilities/funcs";
 
-const Features = () => {
+
+const Features = ({observer}) => {
   const cards = [
     {
       icon: <FaRegHandshake />,
-      title: "Meetup to add users",
+      title: "Meetup users",
       description:
         'Synando allows users to add people within a 10ft interactiton zone called "Meetup" ',
       className: "comment1",
@@ -47,7 +45,7 @@ const Features = () => {
     },
   ];
   return (
-    <div className="features">
+    <div className="features" ref={observer}>
       <div className="large">
         <div className="content">
           {cards.map((item, i) => (
