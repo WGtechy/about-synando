@@ -504,19 +504,21 @@ html {
         flex-direction: row;
         margin: 0 auto;
         width: 100vw;
-        height: 70%;
         overflow-x: hidden;
         position: relative;
         scroll-snap-type: x mandatory;
         overflow: scroll;
-
-        .image {
-          align-items: center;
-          flex-direction: column;
-          justify-content: center;
+        .imageTemp{
           width: 90vw;
-          color: black;
+          height: 80vh;
           scroll-snap-align: start;
+          .image {
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            color: black;
+            height: 70vh;
+          }
         }
         // .page:hover {
         //   margin-left: -0.5em;
@@ -601,18 +603,17 @@ html {
     overflow-x: hidden;
     height: 70vh;
    .section {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: center;
-          width: 100vw;
-          color: black;
-          box-shadow: 1px 1px 6px -1px rgba(154, 0, 249, 0.61);
-          border-radius: 5px;
-          margin: 5px;
-          padding: 5px 0;
-          scroll-snap-align: start;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    box-shadow: 1px 1px 6px -1px rgb(154 0 249 / 61%);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px 0;
+    scroll-snap-align: start;
+    width: 90vw;
           .title {
             display: flex;
             align-items: center;
