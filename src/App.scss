@@ -370,6 +370,9 @@ html {
   .large {
     display: none;
   }
+  ::-webkit-scrollbar {
+    width: 0
+  }
 
   .introPage {
     .mobileBtn {
@@ -593,9 +596,7 @@ html {
       position: relative;
       
         .sectionContainer {
-          ::-webkit-scrollbar {
-            display: none
-          }
+         
           
           justify-content: space-between;
           scroll-snap-type: x mandatory;
