@@ -9,7 +9,7 @@ const DownloadPage = ({observer}) => {
       setText('Download on your Apple device, Also available on Play Store');
       setDevice('Mac');
     }else if(navigator.appVersion.includes('Android')){
-      setText('Downloan on your Android device, Also available on IOS Store');
+      setText('Download on your Android device, Also available on IOS Store');
       setDevice('Android'); 
     } else {
       setText('Available on Android and IOS Devices. Desktop and other platform coming soon')
