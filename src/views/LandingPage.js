@@ -1,15 +1,15 @@
-import React, { Suspense, useCallback, useRef, useState } from 'react'
-import AppTemplatePage from './AppTemplatePage'
-import DownloadPage from './DownloadPage'
-import Features from './Features'
-import IntroPage from './IntroPage'
-import SocialInteraction from './SocialInteraction'
+import React, { Suspense, lazy } from 'react'
+import { loader } from './loader'
+const AppTemplatePage = lazy(()=>import('./AppTemplatePage'))
+const DownloadPage = lazy(()=>import('./DownloadPage'))
+const Features = lazy(()=>import('./Features'))
+const IntroPage = lazy(()=>import('./IntroPage'))
+const SocialInteraction = lazy(()=>import('./SocialInteraction'))
 
 const LandingPage = ({props}) => {
-const loading = (<div>Loading...</div>)
 
   return (
-  <Suspense fallback={loading}>
+  <Suspense fallback={loader}>
    <main className='container'>
    <IntroPage />
    <AppTemplatePage />

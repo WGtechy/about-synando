@@ -4,9 +4,11 @@ import {
   IoLogoAndroid,
   IoVolumeMuteSharp,
   IoVolumeHighSharp,
-  IoShareSocialSharp
+  IoShareSocialSharp,
+  IoCloudDownloadSharp
 } from "react-icons/io5";
 import homeVideo from "../assets/homeVideo.mp4";
+
 const IntroPage = ({observer}) => {
   const [play, setPlay] = useState(true)
   const videoRef = useRef(null);
@@ -28,24 +30,19 @@ const IntroPage = ({observer}) => {
       setVolume(false);
     }
   };
-  console.log(navigator.appVersion)
 
   const shareHandler = ()=>{
     const file= homeVideo;
     // console.log(navigator, {share: navigator?.share}, homeVideo, files)
-    let url = 'https://synando.io';
+    let url = 'https://synando.netlify.app';
      if (navigator.share && navigator?.canShare({file})){
       navigator.share({
-        title: 'Try Synando totday',
-        text: 'Join The World First Real Life Social Network Experience Real Privacy, Networks, Social & Connections',
         file,
         url: 'https://www.synando.com'
       }).then(()=>console.log('Thank you for sharing')).catch(error=>console.log('Sorry could not share, please try again later', error))
     } else 
     if(navigator.share) {
        navigator.share({
-        title: 'Download Synando today and share',
-        text: 'Join The World First Real Life Social Network Experience Real Privacy, Networks, Social & Connections',
         url,
         file
       }).then(()=>console.log('Thank you for sharing')).catch(error=>console.log('Sorry could not share, please try again later', error))
@@ -61,12 +58,6 @@ const IntroPage = ({observer}) => {
       videoRef.current.play()
     }
   }
-  // useEffect(()=>{
-  //   if(videoRef.current && isVideoPlaying){
-  //     console.log('tested')
-  //     videoRef.current.play()
-  //   }
-  // },[isVideoPlaying])
 
   const downloadIcons = [
     {
@@ -102,15 +93,15 @@ const IntroPage = ({observer}) => {
       clickHandler: shareHandler
     },
     {
-      icon: <IoLogoApple />,
+      icon: IoCloudDownloadSharp,
       url: "apps.apple.com/us/app/synando/id6443847115",
       type: "visit",
-      name: "Apple",
+      name: "Download",
       display: navigator.appVersion.includes('Mac')
     },
     {
-      icon: <IoLogoAndroid />,
-      name: "Android",
+      icon: IoCloudDownloadSharp,
+      name: "Download",
       url: "drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
       type: "visit",
       display: navigator.appVersion.includes('Android')
@@ -139,7 +130,7 @@ const IntroPage = ({observer}) => {
               className="mobileIcon"
               key={i}
             >
-              <div className="icon">{item.icon}</div>
+              <div className="icon"><item.icon /></div>
               <div className='iconText'>{item.name}</div>
             </a>
 
@@ -197,7 +188,31 @@ const IntroPage = ({observer}) => {
           autoPlay
           loop
           alt="synando into"
-        />
+          preload='auto'
+          playsInline
+        >
+        <div className="downloadIcons">
+            {downloadIcons.map((item, i) => (
+              item?.url ? <a
+                href={`https://www.${item.url}`}
+                rel="noreferrer"
+                target="_blank"
+                className="downloadIcon"
+                key={i}
+              >
+                <div className="icon"><item.icon /></div>
+                <p>{item.name}</p>
+              </a> : 
+              item?.clickHandler && item?.display && <div className='downloadIcon' 
+              key={i}
+               onClick={item.clickHandler}
+               >
+               <div className='icon'><item.icon /></div>
+                 <p>{item.name}</p>
+              </div>
+            ))}
+          </div>
+        </video>
       </div>
     </div>
   );
