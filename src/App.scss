@@ -581,76 +581,74 @@ html {
 
   .features {
     overflow: scroll;
+    flex-direction: column;
+    width: 100vw;
     .peopleImg {
       width: 100vw;
-    }
+    };
     .mobile {
       display: flex;
       flex-direction: column;
       position: relative;
-        height: 100vh;
-      .content {
-        margin: 25px 5px;
-        justify-content: space-between;
-    // overflow-x: hidden;
-
-  .sectionContainer {
-    scroll-snap-type: x mandatory;
-    margin: 25px auto;
-    overflow: scroll;
-    display: flex;
-    flex-direction: row;
-    overflow-x: hidden;
-    height: 70vh;
-   .section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    color: black;
-    box-shadow: 1px 1px 6px -1px rgb(154 0 249 / 61%);
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px 0;
-    scroll-snap-align: start;
-    width: 90vw;
-          .title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .icon {
-              margin-left: 5px;
-              font-size: 2rem;
-              color: purple;
-            }
-            font-size: 25px;
-            font-weight: 600;
-            color: black;
-            margin-bottom: 0.5rem;
+      
+        .sectionContainer {
+          ::-webkit-scrollbar {
+            display: none
           }
-          .info {
-            font-size: 18px;
-            background: #fff;
-            padding: 1rem;
-            .description {
-              line-height: 30px;
-              font-size: 18px;
-            }
-            ul {
-              padding: 1rem;
-              font-size: 1rem;
-              li {
-                padding-bottom: 0.5rem;
+          
+          justify-content: space-between;
+          scroll-snap-type: x mandatory;
+          margin: 7px;
+          display: flex;
+          flex-direction: row;
+          height: 70vh;
+          overflow: scroll;
+         .section {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          color: black;
+          box-shadow: 1px 1px 6px -1px rgb(154 0 249 / 61%);
+          border-radius: 5px;
+          margin: 5px;
+          padding: 5px 0;
+          scroll-snap-align: start;
+          width: 90vw;
+                .title {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  .icon {
+                    margin-left: 5px;
+                    font-size: 2rem;
+                    color: purple;
+                  }
+                  font-size: 25px;
+                  font-weight: 600;
+                  color: black;
+                  margin-bottom: 0.5rem;
+                }
+                .info {
+                  font-size: 18px;
+                  background: #fff;
+                  padding: 1rem;
+                  width: inherit;
+                  .description {
+                    line-height: 30px;
+                    font-size: 18px;
+                  }
+                  ul {
+                    padding: 1rem;
+                    font-size: 1rem;
+                    li {
+                      padding-bottom: 0.5rem;
+                    }
+                  }
+                }
               }
-            }
-          }
+      
         }
-
-  }
-      }
-       .peopleImg {
-        width: 100vw;
-      }
      
     }
   }
