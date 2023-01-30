@@ -10,18 +10,18 @@ const Features = ({observer}) => {
       icon: <FaRegHandshake />,
       title: "Meetup users",
       description:
-        'Synando allows users to add people within a 10ft interactiton zone called "Meetup" ',
+        'Synando allows users to add people within a 10ft interacton zone called "Meetup" ',
       className: "comment1",
       list: [
-        "No more fake accounts- you know who you are adding and easily meetup",
-        "Reduce cyber-bullying, trolling, and cat fishing",
+        "No more fake accounts; you know who you are adding and easily meetup.",
+        "Reduce cyber-bullying, trolling, and cat fishing.",
       ],
     },
     {
       icon: <MdOutlineRssFeed />,
       title: "Multiple Newsfeed",
       description:
-        " You can add your meetups (contacts) to one of 5 different news feeds",
+        "You can add your meetups (contacts) to one of 5 different news feeds.",
       className: "comment2",
       list: [
         "Social",
