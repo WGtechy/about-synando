@@ -1,18 +1,15 @@
-import { Suspense } from 'react';
 import { Route, Routes } from 'react-router';
 import './App.scss';
-import AppTemplatePage from './views/AppTemplatePage';
-import Comment from './views/Comment';
-import DownloadPage from './views/DownloadPage';
-import Features from './views/Features';
-import IntroPage from './views/IntroPage';
 import LandingPage from './views/LandingPage';
-import SocialInteraction from './views/SocialInteraction';
+import PrivacyPolicy from './views/PrivacyPolicy';
+import TermsAndConditions from './views/TermsAndConditions';
 
 function App() {
   return (
   <Routes>
     <Route path ='/' element={<LandingPage />} />
+    <Route path ='/privacy-policy' element={<PrivacyPolicy />} />
+    <Route path ='/terms-and-conditions' element={<TermsAndConditions />} />
   </Routes>
   );
 }

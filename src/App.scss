@@ -11,6 +11,27 @@ html {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
+.policy {
+  margin: auto;
+  width: 80%;
+  h2{
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+  };
+  h4{
+    font-size: 17px;
+    margin-top: 25px
+  };
+  p{
+    font-size: 15px;
+    text-align: justify
+  };
+  .indent{
+    padding-left: 5px;
+    font-size: 12px
+  }
+}
 
 /* body {
   margin: 0;
@@ -43,6 +64,34 @@ html {
     border-radius: 50%
   }
 }
+.downloadPage, .policy{
+  position: relative;
+  footer{
+    position: absolute;
+    bottom: 5px;
+    a{
+      text-decoration: none;
+      padding: 0 5px;
+      font-size: 600;
+      color: white;
+    }
+  }
+}
+
+.policy{
+  position: relative;
+  padding-bottom: 5rem;
+   footer{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    a{
+      text-decoration: none;
+      padding: 0 5px;
+      font-size: 600;
+      color: inherit;
+    }
+  }}
 
 .comment,
 .features,
