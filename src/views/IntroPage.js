@@ -63,12 +63,12 @@ const IntroPage = ({observer}) => {
     {
       icon: IoLogoApple,
       name: "App Store",
-      url: "apps.apple.com/us/app/synando/id6443847115",
+      url: "https://apps.apple.com/us/app/synando/id6443847115",
     },
     {
       icon: IoLogoAndroid,
       name: "Android APK",
-      url: "drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
     },
     {
       name: "Share",
@@ -94,7 +94,7 @@ const IntroPage = ({observer}) => {
     },
     {
       icon: IoCloudDownloadSharp,
-      url: "apps.apple.com/us/app/synando/id6443847115",
+      url: "https://apps.apple.com/us/app/synando/id6443847115",
       type: "visit",
       name: "Download",
       display: navigator.appVersion.includes('Mac')
@@ -102,7 +102,7 @@ const IntroPage = ({observer}) => {
     {
       icon: IoCloudDownloadSharp,
       name: "Download",
-      url: "drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
       type: "visit",
       display: navigator.appVersion.includes('Android')
 
@@ -124,7 +124,7 @@ const IntroPage = ({observer}) => {
             </div>
           ) : (
             item.display && <a
-              href={`https://www.${item.url}`}
+              href={item.url}
               rel="noreferrer"
               target="_blank"
               className="mobileIcon"
@@ -158,7 +158,7 @@ const IntroPage = ({observer}) => {
           <div className="downloadIcons">
             {downloadIcons.map((item, i) => (
               item?.url ? <a
-                href={`https://www.${item.url}`}
+                href={item.url}
                 rel="noreferrer"
                 target="_blank"
                 className="downloadIcon"
@@ -194,7 +194,7 @@ const IntroPage = ({observer}) => {
         <div className="downloadIcons">
             {downloadIcons.map((item, i) => (
               item?.url ? <a
-                href={`https://www.${item.url}`}
+                href={item.url}
                 rel="noreferrer"
                 target="_blank"
                 className="downloadIcon"

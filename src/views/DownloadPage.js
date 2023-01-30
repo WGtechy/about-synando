@@ -60,7 +60,7 @@ const DownloadPage = ({ observer }) => {
       url: "/privacy-policy",
     },
     {
-      name: "Termsand Conditions",
+      name: "T&C",
       url: "/terms-and-conditions",
     },
   ];

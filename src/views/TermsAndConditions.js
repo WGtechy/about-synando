@@ -17,13 +17,14 @@ const TermsAndConditions = () => {
       url: "/privacy-policy",
     },
     {
-      name: "Terms and Conditions",
+      name: "T&C",
       url: "/terms-and-conditions",
     },
   ];
 
   return (
     <div className='policy'>
+    <h2>Privacy Policy</h2>
     <h4>1. AGREEMENT</h4>
     <p>Please carefully read the following provisions of these Terms of Use (the “Agreement” or
     “Terms of Use”). This is a legal agreement between you and Synando LLC, a Texas Limited
@@ -53,9 +54,9 @@ const TermsAndConditions = () => {
     Service and bears no responsibility for your use of the Service. The Company reserves a right to
     block your Account on the Service if we have any doubts with regard to your eligibility. you further
     represent and warrant that you will not use the Service if the laws of your jurisdiction prohibit you
-    from doing so in accordance with these Terms and Conditions.</p>
+    from doing so in accordance with these T&C.</p>
     <h4>3. ACCOUNT</h4>
-    <p>3.1. To start using the Service you must accept these Terms and Conditions, the Privacy Policy
+    <p>3.1. To start using the Service you must accept these T&C, the Privacy Policy
     and receiving all legal notices, including risk statements and disclaimers. You shall ensure safety
     and confidentiality of your login credentials and bear all risks related to the disclosure of your
     password to third parties.</p>
@@ -64,7 +65,7 @@ const TermsAndConditions = () => {
     Account, suspend your Account, or terminate your Account or your use of Service. Such actions
     may be taken as a result of account inactivity, failure to positively identify yourself, if the Company
     believes your Account has been compromised, in order for us to comply with laws or regulations,
-    or your violation of the terms of these Terms and Conditions. If you have funds remaining in the
+    or your violation of the terms of these T&C. If you have funds remaining in the
     Account, which has been suspended or closed, you will be able to access such funds and withdraw
     them to an external funds address (unless prohibited by law or a court order). If you are unable to
     login to your Account because it has been suspended, you must contact the Company at
@@ -121,7 +122,7 @@ const TermsAndConditions = () => {
     <p>5.4. The right to terminate the Terms of Use under this Section 5 shall not prejudice any other
     right or remedy of either party in respect of any breach of the Terms of Use.</p>
     <h4>6 YOUR WARRANTIES AND REPRESENTATIONS</h4>
-    <p>6.1. By entering these Terms and Conditions you warrant and represent that:</p>
+    <p>6.1. By entering these T&C you warrant and represent that:</p>
     <p className='indent'>(a) You have full capacity to contract under applicable law;</p>
     <p className='indent'>(b) You will only be transacting on the Service with legally obtained funds that belong
     to you;</p>
@@ -270,25 +271,25 @@ const TermsAndConditions = () => {
     limitation or exclusion of liability in contracts with consumers and as a result the contents of this
     section may not apply to you.</p>
     <h4>8 Assignment </h4>
-    <p>8.1. You may not transfer or assign these Terms and Conditions or any rights or obligations
-    you have under these Terms and Conditions without our prior written consent. The Company
-    reserves the right to freely assign or transfer these Terms and Conditions and the rights and
-    obligations under these Terms and Conditions to any third party at any time without prior notice
+    <p>8.1. You may not transfer or assign these T&C or any rights or obligations
+    you have under these T&C without our prior written consent. The Company
+    reserves the right to freely assign or transfer these T&C and the rights and
+    obligations under these T&C to any third party at any time without prior notice
     or consent. If you object to such transfer or assignment, you may stop using the Service and
-    terminate these Terms and Conditions by contacting us.</p>
+    terminate these T&C by contacting us.</p>
     
     
     <h4>9. Jurisdiction, applicable law</h4>
     <p> 9.1. These Terms of Use shall be governed by and construed in accordance with the laws of
     USA, unless otherwise expressly provided. All disputes and controversies arising out of or in
-    connection with the Service and these Terms and Conditions shall be submitted to the jurisdiction
+    connection with the Service and these T&C shall be submitted to the jurisdiction
     and venue of, any state or federal court located in the State of Texas, USA. If any portion of these
     Terms of Use shall be deemed invalid, void or for any reason unenforceable, such portion shall be
     deemed severable and shall not affect the validity and enforceability of any remaining portion.
     </p>
     <p>9.2. The Parties agree to try in good faith to settle through negotiations any dispute,
     disagreement or claim arising out of or in connection with execution, termination or rescission of
-    these terms and conditions. The claiming party shall send a message with its claim to the other
+    these T&C. The claiming party shall send a message with its claim to the other
     party. The message in question shall contain the essentials of the claim and evidence supporting
     such claim.
     Last Updated: January 24, 2022.</p>
