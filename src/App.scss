@@ -31,7 +31,9 @@ html {
     padding-left: 5px;
     font-size: 12px
   }
-}
+};
+
+
 
 /* body {
   margin: 0;
@@ -419,86 +421,86 @@ html {
 }
 
 @media screen and (max-width: 467px) {
-  .large {
-    display: none;
-  }
+  // .large {
+    // display: none;
+  // }
   ::-webkit-scrollbar {
     width: 0
   }
 
   .introPage {
-    .mobileBtn {
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 50%;
-      right: 5%;
-      .mobileIcon {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 6px;
-        text-decoration: none;
-        .iconText {
-          color: white;
-          font-weight: 600;
-        }
-        .icon {
-          width: 50px;
-          height: 50px;
-          padding: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          background: #ffffff61;
-          color: purple;
-          font-size: 30px;
-        }
-      }
-    }
-    .mobile {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      video {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-          .downloadIcons {
-    position: absolute;
-    bottom: 0;
-    // left: 50px;
-    margin: 0 auto;
-    width: 100vw;
-    // right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  //   .mobileBtn {
+  //     z-index: 2;
+  //     display: flex;
+  //     flex-direction: column;
+  //     position: absolute;
+  //     top: 50%;
+  //     right: 5%;
+  //     .mobileIcon {
+  //       display: flex;
+  //       flex-direction: column;
+  //       align-items: center;
+  //       margin-bottom: 6px;
+  //       text-decoration: none;
+  //       .iconText {
+  //         color: purple;
+  //         font-weight: 600;
+  //       }
+  //       .icon {
+  //         width: 50px;
+  //         height: 50px;
+  //         padding: 10px;
+  //         display: flex;
+  //         justify-content: center;
+  //         align-items: center;
+  //         border-radius: 50%;
+  //         background: #ffffff61;
+  //         color: purple;
+  //         font-size: 30px;
+  //       }
+  //     }
+  //   }
+  //   .mobile {
+  //     position: relative;
+  //     width: 100vw;
+  //     height: 100vh;
+  //     video {
+  //       width: 100vw;
+  //       height: 100vh;
+  //       object-fit: cover;
+  //         .downloadIcons {
+  //           position: absolute;
+  //           bottom: 0;
+  //           // left: 50px;
+  //           margin: 0 auto;
+  //           width: 100vw;
+  //           // right: 0;
+  //           display: flex;
+  //           flex-direction: row;
+  //           justify-content: space-evenly;
+  //           align-items: center;
 
-    .downloadIcon {
-      .icon {
-        padding: 0 5px;
-      }
-      border: 1px solid #ebebeb;
-      border-radius: 5px;
-      padding: 10px;
-      text-decoration: none;
-      margin: 10px;
-      display: flex;
-      font-size: 18px;
-      font-weight: 700;
-      align-items: center;
-      cursor: pointer;
-      z-index: 1;
-      background: rgba(154, 0, 249, 0.61);
-      color: #fff;
-    }
-  }
-      }
-    }
+  //       .downloadIcon {
+  //       .icon {
+  //         padding: 0 5px;
+  //       }
+  //       border: 1px solid #ebebeb;
+  //       border-radius: 5px;
+  //       padding: 10px;
+  //       text-decoration: none;
+  //       margin: 10px;
+  //       display: flex;
+  //       font-size: 18px;
+  //       font-weight: 700;
+  //       align-items: center;
+  //       cursor: pointer;
+  //       z-index: 1;
+  //       background: rgba(154, 0, 249, 0.61);
+  //       color: #fff;
+  //   }
+  // }
+  //     }
+  //   }
   }
   .downloadIcons {
     position: absolute;

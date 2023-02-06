@@ -111,7 +111,7 @@ const IntroPage = ({observer}) => {
   return (
     <div className="introPage" ref={observer}>
       <img src="favicon.ico" alt="logo" className="logo" />
-      <div className="mobileBtn">
+      {/* <div className="mobileBtn">
         {mobileBtn.map((item, i) =>
           item.type === "click" ? (
             item.display && <div className="mobileIcon" key={i}>
@@ -136,7 +136,7 @@ const IntroPage = ({observer}) => {
 
           )
         )}
-      </div>
+      </div> */}
 
       <div className=" large">
         <div className="introPageLarge">
@@ -154,6 +154,10 @@ const IntroPage = ({observer}) => {
                 <span>Privacy</span>
               </span>
             </div>
+          </div>
+          <div className='contentText'>
+          With Synando, you will see what's closest to you. You will see who's closer to you. You will have control and comfort tto share personal stories,
+          and inspireyour friends witthour feeling like you're taling to a stranger; control your world.
           </div>
           <div className="downloadIcons">
             {downloadIcons.map((item, i) => (
@@ -178,7 +182,7 @@ const IntroPage = ({observer}) => {
           </div>
         </div>
       </div>
-      <div className="mobile">
+      {/* <div className="mobile">
         <video
           ref={videoRef}
           onContextMenu={(e) => e.preventDefault()}
@@ -213,7 +217,7 @@ const IntroPage = ({observer}) => {
             ))}
           </div>
         </video>
-      </div>
+      </div> */}
     </div>
   );
 };
