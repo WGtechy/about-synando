@@ -62,12 +62,12 @@ const IntroPage = ({observer}) => {
   const downloadIcons = [
     {
       icon: IoLogoApple,
-      name: "App Store",
+      name: "IOS",
       url: "https://apps.apple.com/us/app/synando/id6443847115",
     },
     {
       icon: IoLogoAndroid,
-      name: "Android APK",
+      name: "Android",
       url: "https://drive.google.com/file/d/1xWERForrzBnnHQwYvzHlIITsJ80MRzLE/view?usp=sharing",
     },
     {
