@@ -104,6 +104,7 @@ html {
   display: flex;
   height: 100vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always
 }
 
 .introPage .logo {
@@ -566,6 +567,8 @@ html {
           width: 90vw;
           height: 80vh;
           scroll-snap-align: start;
+  scroll-snap-stop: always;
+
           .image {
             align-items: center;
             flex-direction: column;
@@ -667,6 +670,8 @@ html {
           margin: 5px;
           padding: 5px 0;
           scroll-snap-align: start;
+  scroll-snap-stop: always;
+
           width: 90vw;
                 .title {
                   display: flex;
