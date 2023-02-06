@@ -124,16 +124,9 @@ html {
   display: none
 }
 
-@media screen and (min-width: 468px) {
 
-  .mobile {
-    display: none;
-  }
-  .introPage {
-    .mobileBtn {
-      display: none;
-    }
-    .large {
+.introPage {
+    .largeAndMobile {
       height: 100vh;
       width: 100%;
       font-size: 18px;
@@ -149,6 +142,9 @@ html {
         color: #ebebeb;
         justify-content: space-evenly;
         height: 100vh;
+        .contentText{
+          min-width: 30%
+        }
         .homeText {
           .experience {
             display: flex;
@@ -222,6 +218,104 @@ html {
       }
     }
   }
+@media screen and (min-width: 468px) {
+
+  .mobile {
+    display: none;
+  }
+  // .introPage {
+  //   .mobileBtn {
+  //     display: none;
+  //   }
+  //   .largeAndMobile {
+  //     height: 100vh;
+  //     width: 100%;
+  //     font-size: 18px;
+  //     align-items: center;
+  //     padding-left: 3rem;
+  //     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(147, 6, 112, 10)),
+  //       url("./assets/homeBG.jpg");
+  //     background-position: center;
+  //     background-size: cover;
+  //     .introPageLarge {
+  //       display: flex;
+  //       flex-direction: column;
+  //       color: #ebebeb;
+  //       justify-content: space-evenly;
+  //       height: 100vh;
+  //       .homeText {
+  //         .experience {
+  //           display: flex;
+  //           position: relative;
+  //           overflow: hidden;
+  //           font-size: 1.5rem;
+  //           margin: 1rem 0;
+  //           width: 300px;
+  //           .words {
+  //             display: flex;
+  //             flex-direction: column;
+  //             position: absolute;
+  //             top: 0;
+  //             right: 0;
+  //             overflow: hidden;
+  //             margin: 0 -10px;
+  //             span {
+  //               color: #2faffd;
+  //               animation: spin_words 6s infinite;
+  //               font-weight: 700;
+  //             }
+
+  //             @keyframes spin_words {
+  //               10% {
+  //                 transform: translateY(-112%);
+  //               }
+  //               25% {
+  //                 transform: translateY(-100%);
+  //               }
+  //               35% {
+  //                 transform: translateY(-212%);
+  //               }
+  //               50% {
+  //                 transform: translateY(-200%);
+  //               }
+  //               60% {
+  //                 transform: translateY(-312%);
+  //               }
+  //               75% {
+  //                 transform: translateY(-300%);
+  //               }
+  //               85% {
+  //                 transform: translateY(-412%);
+  //               }
+  //               100% {
+  //                 transform: translateY(-400%);
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .downloadIcons {
+  //         display: flex;
+  //         flex-direction: row;
+  //         .downloadIcon {
+  //           border: 1px solid #ebebeb;
+  //           color: #ebebeb;
+  //           border-radius: 5px;
+  //           padding: 5px;
+  //           margin: 5px;
+  //           display: flex;
+  //           min-width: 150px;
+  //           justify-content: space-evenly;
+  //           cursor: pointer;
+  //           text-decoration: none;
+  //         }
+  //       }
+  //       .downloadIcon:hover {
+  //         background: #2faffd;
+  //       }
+  //     }
+  //   }
+  // }
   .features {
     background: linear-gradient(rgba(154, 0, 249, 0.61), #9a00f9),
       url("./assets/students.jpg");
@@ -421,9 +515,9 @@ html {
 }
 
 @media screen and (max-width: 467px) {
-  // .large {
-    // display: none;
-  // }
+  .large {
+    display: none;
+  }
   ::-webkit-scrollbar {
     width: 0
   }

@@ -138,7 +138,7 @@ const IntroPage = ({observer}) => {
         )}
       </div> */}
 
-      <div className=" large">
+      <div className=" largeAndMobile">
         <div className="introPageLarge">
           <div className="homeText">
             <h2>
@@ -156,8 +156,10 @@ const IntroPage = ({observer}) => {
             </div>
           </div>
           <div className='contentText'>
-          With Synando, you will see what's closest to you. You will see who's closer to you. You will have control and comfort tto share personal stories,
-          and inspireyour friends witthour feeling like you're taling to a stranger; control your world.
+          With Synando, you will see what's closest to you.
+          <br /> You will see who's closer to you.
+          <br /> You will have control and comfort to share personal stories,
+          and inspire your friends with our feeling like you're <br /> talking to a stranger; control your world.
           </div>
           <div className="downloadIcons">
             {downloadIcons.map((item, i) => (
