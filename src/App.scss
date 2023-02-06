@@ -131,7 +131,6 @@ html {
       width: 100%;
       font-size: 18px;
       align-items: center;
-      padding-left: 3rem;
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(147, 6, 112, 10)),
         url("./assets/homeBG.jpg");
       background-position: center;
@@ -143,9 +142,11 @@ html {
         justify-content: space-evenly;
         height: 100vh;
         .contentText{
-          min-width: 30%
+          min-width: 30%;
+      padding: .6rem;
         }
         .homeText {
+      padding: .6rem;
           .experience {
             display: flex;
             position: relative;
@@ -206,7 +207,6 @@ html {
             padding: 5px;
             margin: 5px;
             display: flex;
-            min-width: 150px;
             justify-content: space-evenly;
             cursor: pointer;
             text-decoration: none;
