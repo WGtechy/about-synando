@@ -15,7 +15,7 @@ const Features = ({observer}) => {
       list: [
         "No more fake accounts; you know who you are adding and easily meetup.",
         "Reduce cyber-bullying, trolling, and cat fishing.",
-      ],
+      ]
     },
     {
       icon: <MdOutlineRssFeed />,
@@ -29,7 +29,7 @@ const Features = ({observer}) => {
         "Personal",
         "Family",
         "Plus a fully customized feed",
-      ],
+      ]
     },
     {
       icon: <MdVerified />,
@@ -41,8 +41,8 @@ const Features = ({observer}) => {
         "Create comunities",
         "More User Generated Content",
         "Verified status - No fake account",
-      ],
-    },
+      ]
+    }
   ];
   return (
     <div className="features" ref={observer}>
