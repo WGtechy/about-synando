@@ -156,10 +156,7 @@ const IntroPage = ({observer}) => {
             </div>
           </div>
           <div className='contentText'>
-          With Synando, you will see what's closest to you.
-           You will see who's closer to you.
-           You will have control and comfort to share personal stories,
-          and inspire your friends without feeling like you're talking to a stranger; control your world.
+          With Synando, you will see what's closest to you. You will see who's closer to you.  You will have control and comfort to share personal stories, and inspire your friends without feeling like you're talking to a stranger; control your world.
           </div>
           <div className="downloadIcons">
             {downloadIcons.map((item, i) => (
