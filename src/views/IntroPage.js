@@ -7,7 +7,6 @@ import {
   IoShareSocialSharp,
   IoCloudDownloadSharp
 } from "react-icons/io5";
-import homeVideo from "../assets/homeVideo.mp4";
 
 const IntroPage = ({observer}) => {
   const [play, setPlay] = useState(true)
