@@ -32,14 +32,13 @@ const IntroPage = ({observer}) => {
 
   const shareHandler = ()=>{
     const file= homeVideo;
-    // console.log(navigator, {share: navigator?.share}, homeVideo, files)
     let url = 'https://synando.netlify.app';
-     if (navigator.share && navigator?.canShare({file})){
-      navigator.share({
-        file,
-        url: 'https://www.synando.com'
-      }).then(()=>console.log('Thank you for sharing')).catch(error=>console.log('Sorry could not share, please try again later', error))
-    } else 
+    //  if (navigator.share && navigator?.canShare({file})){
+    //   navigator.share({
+    //     file,
+    //     url: 'https://www.synando.com'
+    //   }).then(()=>console.log('Thank you for sharing')).catch(error=>console.log('Sorry could not share, please try again later', error))
+    // } else 
     if(navigator.share) {
        navigator.share({
         url,
